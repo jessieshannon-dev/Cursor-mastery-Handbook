@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Complete Cursor Mastery Handbook</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <p class="eyebrow">Beginner Friendly Training Site</p>
+      <h1>Complete Cursor Mastery Handbook</h1>
+      <p class="subtitle">A practical guide to installing Cursor, building apps with AI, using GitHub, deploying to Vercel, connecting Supabase, and pointing Porkbun domains.</p>
+      <div class="hero-actions">
+        <a href="#start" class="button">Start Learning</a>
+        <a href="#cheatsheet" class="button secondary">Cheat Sheet</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <aside>
+      <div class="sticky">
+        <h2>Contents</h2>
+        <input id="search" placeholder="Search the guide..." />
+        <nav><a href="#start">Start Here</a>
+<a href="#what-is-cursor">1. What Cursor Is</a>
+<a href="#install-cursor">2. Install Cursor on Windows</a>
+<a href="#install-git">3. Install Git</a>
+<a href="#install-node">4. Install Node.js</a>
+<a href="#accounts">5. Create the Accounts</a>
+<a href="#cursor-tour">6. Tour of Cursor</a>
+<a href="#chat-vs-agent">7. Cursor Chat vs Agent vs Inline Edit</a>
+<a href="#first-project">8. Build the First Project</a>
+<a href="#run-project">9. Run the Project Locally</a>
+<a href="#git-github">10. Git and GitHub From Scratch</a>
+<a href="#deploy-vercel">11. Deploy to Vercel</a>
+<a href="#supabase">12. Set Up Supabase</a>
+<a href="#porkbun">13. Connect a Porkbun Domain</a>
+<a href="#prompting">14. Prompt Engineering for Cursor</a>
+<a href="#debugging">15. Debugging With Cursor</a>
+<a href="#inventory-app">16. Build a Real Inventory App</a>
+<a href="#qa-checklist">17. QA Checklist Before Launch</a>
+<a href="#cheatsheet">18. Cheat Sheet</a>
+<a href="#glossary">19. Glossary</a>
+<a href="#share">20. How to Share This Website</a></nav>
+      </div>
+    </aside>
+
+    <main>
+      <section id="start" class="card"><h2>Start Here</h2>
+        <p>This website is a beginner-friendly training guide for learning Cursor from scratch and understanding the full modern app-building workflow.</p>
+        <div class="callout good">
+          <strong>What this guide teaches:</strong>
+          <ul>
+            <li>How to install Cursor, Git, Node.js, GitHub, Vercel, Supabase, and Porkbun.</li>
+            <li>How Cursor is different from Lovable and other app builders.</li>
+            <li>How to build, test, save, and deploy a real app.</li>
+            <li>How the full stack works: Cursor → GitHub → Vercel → Supabase → Porkbun.</li>
+          </ul>
+        </div>
+        <h3>The Big Picture</h3>
+        <pre><code>You build in Cursor
+        ↓
+Code is saved to GitHub
+        ↓
+Vercel deploys the website
+        ↓
+Supabase stores users, inventory, images, and data
+        ↓
+Porkbun points your custom domain to Vercel</code></pre>
+        </section>
+<section id="what-is-cursor" class="card"><h2>1. What Cursor Is</h2>
+        <p>Cursor is an AI-powered code editor. It looks and feels a lot like VS Code, but it has AI built directly into the workflow.</p>
+        <p>Cursor is not the same thing as Lovable. Lovable is more like a guided app generator where you describe an app and it builds inside its own platform. Cursor is a real code editor where you own the actual codebase.</p>
+        <table>
+          <tr><th>Tool</th><th>Best For</th><th>Main Difference</th></tr>
+          <tr><td>Lovable</td><td>Fast prototypes and app ideas</td><td>More guided and platform-based</td></tr>
+          <tr><td>Cursor</td><td>Real custom software projects</td><td>You own and control the code</td></tr>
+          <tr><td>Vercel</td><td>Hosting websites</td><td>Deploys your code from GitHub</td></tr>
+          <tr><td>Supabase</td><td>Backend and database</td><td>Stores app data, users, files, and auth</td></tr>
+        </table>
+        <div class="callout">
+          <strong>Simple explanation:</strong> Cursor is where you build. GitHub stores the code. Vercel hosts the website. Supabase stores the data. Porkbun owns the domain.
+        </div>
+        </section>
+<section id="install-cursor" class="card"><h2>2. Install Cursor on Windows</h2>
+        <ol>
+          <li>Go to <a href="https://cursor.com" target="_blank">cursor.com</a>.</li>
+          <li>Click <strong>Download for Windows</strong>.</li>
+          <li>Open the installer after it downloads.</li>
+          <li>Accept the default installation settings.</li>
+          <li>Open Cursor.</li>
+          <li>Sign in with GitHub, Google, or email. GitHub is recommended if you plan to deploy apps.</li>
+        </ol>
+        <h3>After Cursor Opens</h3>
+        <ul>
+          <li>Look for the Explorer panel on the left.</li>
+          <li>Look for the Terminal at the bottom.</li>
+          <li>Use <kbd>Ctrl</kbd> + <kbd>L</kbd> to open AI Chat.</li>
+          <li>Use <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>P</kbd> to open the Command Palette.</li>
+        </ul>
+        </section>
+<section id="install-git" class="card"><h2>3. Install Git</h2>
+        <p>Git tracks changes in your code. GitHub stores those changes online.</p>
+        <ol>
+          <li>Go to <a href="https://git-scm.com/downloads" target="_blank">git-scm.com/downloads</a>.</li>
+          <li>Download Git for Windows.</li>
+          <li>Run the installer.</li>
+          <li>Use the default settings unless you know exactly what you are changing.</li>
+          <li>Restart your computer if needed.</li>
+        </ol>
+        <h3>Verify Git Installed</h3>
+        <pre><code>git --version</code></pre>
+        <p>If you see a version number, Git is installed.</p>
+        </section>
+<section id="install-node" class="card"><h2>4. Install Node.js</h2>
+        <p>Node.js lets you run modern JavaScript and web apps on your computer.</p>
+        <ol>
+          <li>Go to <a href="https://nodejs.org" target="_blank">nodejs.org</a>.</li>
+          <li>Download the <strong>LTS</strong> version.</li>
+          <li>Install using the default settings.</li>
+        </ol>
+        <h3>Verify Node and npm</h3>
+        <pre><code>node -v
+npm -v</code></pre>
+        <p>If both commands return version numbers, you're good. Tiny victory parade, no confetti cannon required.</p>
+        </section>
+<section id="accounts" class="card"><h2>5. Create the Accounts</h2>
+        <h3>GitHub</h3>
+        <p>Create an account at <a href="https://github.com" target="_blank">github.com</a>. GitHub stores your code online.</p>
+        <h3>Vercel</h3>
+        <p>Create an account at <a href="https://vercel.com" target="_blank">vercel.com</a>. Sign in with GitHub.</p>
+        <h3>Supabase</h3>
+        <p>Create an account at <a href="https://supabase.com" target="_blank">supabase.com</a>. Supabase stores your database, users, and files.</p>
+        <h3>Porkbun</h3>
+        <p>If you need a custom domain, create an account at <a href="https://porkbun.com" target="_blank">porkbun.com</a>.</p>
+        </section>
+<section id="cursor-tour" class="card"><h2>6. Tour of Cursor</h2>
+        <table>
+          <tr><th>Area</th><th>What It Does</th></tr>
+          <tr><td>Explorer</td><td>Shows your project files.</td></tr>
+          <tr><td>Editor</td><td>Where code opens and changes are made.</td></tr>
+          <tr><td>Terminal</td><td>Where you run commands like npm install and npm run dev.</td></tr>
+          <tr><td>AI Chat</td><td>Ask questions, generate code, explain errors.</td></tr>
+          <tr><td>Agent</td><td>Lets AI make multi-file changes.</td></tr>
+          <tr><td>Source Control</td><td>Shows Git changes and lets you commit.</td></tr>
+        </table>
+        <div class="callout warn">
+          <strong>Do not blindly accept everything AI creates.</strong> Review, test, and ask questions. AI is powerful. It is also occasionally a confident little chaos goblin.
+        </div>
+        </section>
+<section id="chat-vs-agent" class="card"><h2>7. Cursor Chat vs Agent vs Inline Edit</h2>
+        <h3>Chat</h3>
+        <p>Use Chat when you want explanations, planning, debugging help, or small code snippets.</p>
+        <h3>Agent</h3>
+        <p>Use Agent when you want Cursor to create or modify multiple files.</p>
+        <h3>Inline Edit</h3>
+        <p>Use Inline Edit when you highlight code and want a specific change.</p>
+        <div class="callout good">
+          <strong>Rule of thumb:</strong> Chat is for thinking. Agent is for building. Inline Edit is for fixing one spot.
+        </div>
+        </section>
+<section id="first-project" class="card"><h2>8. Build the First Project</h2>
+        <ol>
+          <li>Open Cursor.</li>
+          <li>Click <strong>File → Open Folder</strong>.</li>
+          <li>Create a new folder called <strong>InventoryWebsite</strong>.</li>
+          <li>Open the folder.</li>
+          <li>Open Cursor Chat with <kbd>Ctrl</kbd> + <kbd>L</kbd>.</li>
+        </ol>
+        <h3>Starter Prompt</h3>
+        <button class="copy" data-copy="Build a modern inventory management website using Next.js, TypeScript, Tailwind CSS, and Supabase. Include authentication, inventory items, categories, image uploads, search, filters, dashboard cards, low-stock alerts, and a responsive mobile-friendly design.">Copy prompt</button>
+        <pre><code>Build a modern inventory management website using Next.js, TypeScript, Tailwind CSS, and Supabase. Include authentication, inventory items, categories, image uploads, search, filters, dashboard cards, low-stock alerts, and a responsive mobile-friendly design.</code></pre>
+        </section>
+<section id="run-project" class="card"><h2>9. Run the Project Locally</h2>
+        <p>After Cursor creates the project files, open the Terminal.</p>
+        <pre><code>npm install
+npm run dev</code></pre>
+        <p>Then open the local address shown in the terminal, usually:</p>
+        <pre><code>http://localhost:3000</code></pre>
+        <h3>If It Fails</h3>
+        <p>Copy the full error and paste it into Cursor:</p>
+        <pre><code>Fix this error. Explain what caused it, make the minimum code change needed, and tell me how to test the fix.</code></pre>
+        </section>
+<section id="git-github" class="card"><h2>10. Git and GitHub From Scratch</h2>
+        <p>Git is the change tracker. GitHub is the online storage place for your code.</p>
+        <h3>First-Time Commands</h3>
+        <pre><code>git init
+git add .
+git commit -m "Initial commit"</code></pre>
+        <h3>Connect to GitHub</h3>
+        <pre><code>git remote add origin YOUR_GITHUB_REPOSITORY_URL
+git branch -M main
+git push -u origin main</code></pre>
+        <h3>Everyday Git Workflow</h3>
+        <pre><code>git add .
+git commit -m "Describe what changed"
+git push</code></pre>
+        </section>
+<section id="deploy-vercel" class="card"><h2>11. Deploy to Vercel</h2>
+        <ol>
+          <li>Go to <a href="https://vercel.com" target="_blank">vercel.com</a>.</li>
+          <li>Sign in with GitHub.</li>
+          <li>Click <strong>New Project</strong>.</li>
+          <li>Select your GitHub repository.</li>
+          <li>Add environment variables if needed.</li>
+          <li>Click <strong>Deploy</strong>.</li>
+        </ol>
+        <div class="callout good">
+          Every time you push to GitHub, Vercel automatically rebuilds and redeploys the website.
+        </div>
+        </section>
+<section id="supabase" class="card"><h2>12. Set Up Supabase</h2>
+        <p>Supabase gives your app a backend without you having to build everything from scratch.</p>
+        <h3>Supabase Can Handle</h3>
+        <ul>
+          <li>User accounts and login</li>
+          <li>Database tables</li>
+          <li>File uploads and images</li>
+          <li>Permissions</li>
+          <li>APIs</li>
+          <li>Realtime updates</li>
+        </ul>
+        <h3>Environment Variables</h3>
+        <pre><code>NEXT_PUBLIC_SUPABASE_URL=your_project_url
+NEXT_PUBLIC_SUPABASE_ANON_KEY=your_anon_key
+SUPABASE_SERVICE_ROLE_KEY=your_service_role_key</code></pre>
+        <div class="callout warn">
+          Never expose the service role key publicly. That key is powerful. Treat it like the keys to the snack cabinet, except worse.
+        </div>
+        </section>
+<section id="porkbun" class="card"><h2>13. Connect a Porkbun Domain</h2>
+        <ol>
+          <li>Buy a domain in Porkbun.</li>
+          <li>Go to your project in Vercel.</li>
+          <li>Open <strong>Settings → Domains</strong>.</li>
+          <li>Add your domain.</li>
+          <li>Vercel will show the DNS records you need.</li>
+          <li>Go to Porkbun DNS settings.</li>
+          <li>Add or update the records Vercel gave you.</li>
+          <li>Wait for DNS propagation.</li>
+        </ol>
+        <p>Porkbun owns the domain. Vercel hosts the site. Don't make this harder than it is; the internet already has enough nonsense.</p>
+        </section>
+<section id="prompting" class="card"><h2>14. Prompt Engineering for Cursor</h2>
+        <h3>Bad Prompt</h3>
+        <pre><code>Build me an app.</code></pre>
+        <h3>Better Prompt</h3>
+        <pre><code>Build a responsive inventory management app for a small business using Next.js, TypeScript, Tailwind CSS, Supabase Auth, Supabase Database, and Supabase Storage. Include user login, dashboard cards, inventory CRUD, categories, image uploads, low-stock alerts, search, filters, and mobile-friendly UI.</code></pre>
+        <h3>Best Prompt Pattern</h3>
+        <pre><code>You are a senior software architect and full-stack developer.
+
+Goal:
+Build [specific app].
+
+Tech stack:
+Use [framework, database, styling, auth].
+
+Requirements:
+- Feature 1
+- Feature 2
+- Feature 3
+
+Constraints:
+- Mobile responsive
+- Secure
+- Easy to maintain
+- No fake buttons
+- No placeholder features unless clearly labeled
+
+Before coding:
+Explain the plan.
+
+After coding:
+Tell me how to test everything.</code></pre>
+        </section>
+<section id="debugging" class="card"><h2>15. Debugging With Cursor</h2>
+        <p>When something breaks, do not panic. Copy the error and make Cursor earn its snacks.</p>
+        <h3>Error-Fixing Prompt</h3>
+        <button class="copy" data-copy="I am getting this error. Explain what it means in plain English, identify the most likely cause, fix the code, and give me exact steps to test the fix. Do not make unrelated changes.">Copy prompt</button>
+        <pre><code>I am getting this error. Explain what it means in plain English, identify the most likely cause, fix the code, and give me exact steps to test the fix. Do not make unrelated changes.</code></pre>
+        <h3>Common Problems</h3>
+        <table>
+          <tr><th>Problem</th><th>Likely Cause</th><th>Fix</th></tr>
+          <tr><td>npm not recognized</td><td>Node.js not installed or terminal needs restart</td><td>Install Node LTS and restart</td></tr>
+          <tr><td>git not recognized</td><td>Git not installed or PATH issue</td><td>Install Git and restart</td></tr>
+          <tr><td>Vercel build failed</td><td>Missing env vars or TypeScript error</td><td>Check build logs</td></tr>
+          <tr><td>Supabase login fails</td><td>Wrong URL/key or redirect settings</td><td>Check env vars and auth URLs</td></tr>
+        </table>
+        </section>
+<section id="inventory-app" class="card"><h2>16. Build a Real Inventory App</h2>
+        <p>A strong beginner project is a semi-ecommerce inventory site.</p>
+        <h3>Core Features</h3>
+        <ul>
+          <li>User login</li>
+          <li>Inventory list</li>
+          <li>Add/edit/delete inventory items</li>
+          <li>Categories</li>
+          <li>Images</li>
+          <li>Stock count</li>
+          <li>Low-stock warnings</li>
+          <li>Dashboard</li>
+          <li>Search and filters</li>
+          <li>Responsive mobile layout</li>
+        </ul>
+        <h3>Database Tables</h3>
+        <pre><code>profiles
+categories
+inventory_items
+inventory_images
+stock_movements</code></pre>
+        <h3>Cursor Build Prompt</h3>
+        <pre><code>Create a complete inventory management app with Supabase database tables, authentication, protected routes, inventory CRUD, image upload, categories, dashboard analytics, stock movement history, and mobile-responsive UI. Generate SQL migrations and explain how to run them in Supabase.</code></pre>
+        </section>
+<section id="qa-checklist" class="card"><h2>17. QA Checklist Before Launch</h2>
+        <ul class="checklist">
+          <li><input type="checkbox"> Can a new user sign up?</li>
+          <li><input type="checkbox"> Can a user log in and log out?</li>
+          <li><input type="checkbox"> Are protected pages blocked when logged out?</li>
+          <li><input type="checkbox"> Can inventory items be created?</li>
+          <li><input type="checkbox"> Can inventory items be edited?</li>
+          <li><input type="checkbox"> Can inventory items be deleted?</li>
+          <li><input type="checkbox"> Does search work?</li>
+          <li><input type="checkbox"> Does it work on a phone?</li>
+          <li><input type="checkbox"> Does the Vercel build pass?</li>
+          <li><input type="checkbox"> Are environment variables set in Vercel?</li>
+          <li><input type="checkbox"> Are Supabase permissions secure?</li>
+          <li><input type="checkbox"> Are there no fake buttons or dead links?</li>
+        </ul>
+        </section>
+<section id="cheatsheet" class="card"><h2>18. Cheat Sheet</h2>
+        <h3>Install and Run</h3>
+        <pre><code>npm install
+npm run dev</code></pre>
+        <h3>Git</h3>
+        <pre><code>git status
+git add .
+git commit -m "message"
+git push</code></pre>
+        <h3>Debug</h3>
+        <pre><code>npm run build</code></pre>
+        <h3>Best Cursor Prompt</h3>
+        <pre><code>Review this app like a senior QA engineer and product architect. Find bugs, broken flows, security risks, UX problems, missing states, mobile issues, and anything that would make a real user quit.</code></pre>
+        </section>
+<section id="glossary" class="card"><h2>19. Glossary</h2>
+        <dl>
+          <dt>API</dt><dd>How one piece of software talks to another.</dd>
+          <dt>Backend</dt><dd>The server/database side of an app.</dd>
+          <dt>Commit</dt><dd>A saved snapshot of code changes.</dd>
+          <dt>Deploy</dt><dd>Publish the app so people can use it online.</dd>
+          <dt>DNS</dt><dd>Domain settings that point a domain to a website host.</dd>
+          <dt>Environment Variables</dt><dd>Private settings and keys used by an app.</dd>
+          <dt>Frontend</dt><dd>What users see and click.</dd>
+          <dt>Repository</dt><dd>A project stored in GitHub.</dd>
+          <dt>Supabase</dt><dd>A backend platform for database, auth, and storage.</dd>
+          <dt>Vercel</dt><dd>A hosting platform for modern web apps.</dd>
+        </dl>
+        </section>
+<section id="share" class="card"><h2>20. How to Share This Website</h2>
+        <h3>Option A: Open Locally</h3>
+        <p>Open the <strong>index.html</strong> file in any browser.</p>
+        <h3>Option B: Deploy to Vercel</h3>
+        <ol>
+          <li>Create a GitHub repository.</li>
+          <li>Upload these website files.</li>
+          <li>Import the repository into Vercel.</li>
+          <li>Deploy.</li>
+          <li>Send Brandon the Vercel link.</li>
+        </ol>
+        <h3>Option C: Put It Inside an Existing Site</h3>
+        <p>You can copy the HTML sections into another website or documentation page.</p>
+        </section>
+      <footer>
+        <p>Created as a shareable beginner website for learning Cursor and the modern AI app-building workflow.</p>
+      </footer>
+    </main>
+  </div>
+
+  <button id="topBtn">↑</button>
+  <script src="script.js"></script>
+</body>
+</html>
